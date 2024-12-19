@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONTAK-PASSIANA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    </head>
+
+    <body class="flex flex-col min-h-screen">
+
+        <!-- Navbar -->
+        <nav class="bg-orange-500 fixed top-0 left-0 w-full shadow-lg z-50">
+            <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+                <!-- Logo dan Judul -->
+                <div class="flex items-center space-x-3">
+                    <img src="ps.png" alt="Logo" class="h-10">
+                    <h1 class="text-white text-2xl font-bold">Passiana`</h1>
+                </div>
+                <!-- Navigation Links -->
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="./" class="text-white font-semibold hover:text-blue-400">Home</a></li>
+                    <li><a href="./tentang.html" class="text-white font-semibold hover:text-blue-400">Tentang</a></li>
+                    <li><a href="./pesan.html" class="text-white font-semibold hover:text-blue-400">Pesan</a></li>
+                    <li><a href="./contact.html" class="text-white font-semibold hover:text-blue-400">Kontak</a></li>
+                    <li><a href="./peta.html" class="text-white font-semibold hover:text-blue-400">Peta</a></li>
+                </ul>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden bg-orange-400" id="mobile-menu">
+                <ul class="flex flex-col space-y-2 py-3 px-4">
+                    <li><a href="./" class="text-white font-semibold hover:text-blue-400">Home</a></li>
+                    <li><a href="./tentang.html" class="text-white font-semibold hover:text-blue-400">Tentang</a></li>
+                    <li><a href="./pesan.html" class="text-white font-semibold hover:text-blue-400">Pesan</a></li>
+                    <li><a href="./contact.html" class="text-white font-semibold hover:text-blue-400">Kontak</a></li>
+                    <li><a href="./peta.html" class="text-white font-semibold hover:text-blue-400">Peta</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <script>
+            // Toggle Mobile Menu
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+
+        <!-- Section Contact -->
+        <section id="contact" class="h-screen flex items-center justify-center bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap -mx-4">
+                    <!-- Contact Form -->
+                    <div class="w-full md:w-1/2 px-4">
+                        <form class="bg-gray-100 p-6 rounded-lg shadow-md h-full flex flex-col justify-center">
+                            <div class="mb-4">
+                                <label for="name" class="block text-sm font-medium text-gray-700">Nama</label>
+                                <input type="text" id="name" class="w-full mt-2 p-3 border border-gray-300 rounded-lg"
+                                    placeholder="Nama Anda" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                <input type="email" id="email" class="w-full mt-2 p-3 border border-gray-300 rounded-lg"
+                                    placeholder="Email Anda" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-sm font-medium text-gray-700">Pesan</label>
+                                <textarea id="message" rows="4"
+                                    class="w-full mt-2 p-3 border border-gray-300 rounded-lg" placeholder="Pesan Anda"
+                                    required></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-orange-500 text-white font-semibold py-2 rounded-lg hover:bg-orange-600">
+                                Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                    <!-- Contact Info -->
+                    <div class="w-full md:w-1/2 px-4 mt-8 md:mt-0">
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-md h-full flex flex-col justify-center">
+                            <h3 class="text-xl font-bold mb-4">Informasi Kontak</h3>
+                            <p class="mb-2"><strong>Alamat:</strong> Jl.Samratulangi</p>
+                            <p class="mb-2"><strong>Email:</strong> info@passiana.com</p>
+                            <p class="mb-2"><strong>Telepon:</strong> +6285255602716</p>
+                            <p class="mb-2"><strong>Jam Operasional:</strong> Senin - minggu, 09:00 - 22:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-orange-500 bahring fixed bottom-0 w-full font-semibold text-white text-center py-4">
+            <p class="text-sm">&copy; 2024 Terasi Passiana`. Irawansya.</p>
+        </footer>
+    </body>
+
+</html>
